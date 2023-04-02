@@ -1,6 +1,6 @@
 # README
  
-This project builds a length-versatile and noise robust LoRa radio frequency fingerprint identification (RFFI) system based on deep learning techiniques. 
+This project builds a length-versatile and noise-robust LoRa radio frequency fingerprint identification (RFFI) system based on deep learning techiniques. 
 
 ## Citation 
 
