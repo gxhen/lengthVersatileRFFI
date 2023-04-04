@@ -20,6 +20,26 @@ If the part of the dataset/codes contributes to your project, please cite:
 }
 ```
 
+## Dataset Information
+
+### Experimental Devices
+
+**Transmitters:** device 31-35 LoPy4, device 36-40 Dragino LoRa shield.
+
+**Receiver:** USRP N210 software-defined radio (SDR).
+
+### Datasets
+
+|  Name  | Number of Packets Per Device |  Spreading Factor  |
+|  --- | ---  | ---  |
+| sf_7_train.h5  | 2,500 | 7 |
+| sf_8_train.h5 | 2,500 | 8  |
+| sf_9_train.h5 | 2,500 | 9  |
+| sf_7_test.h5 | 500 | 7  |
+| sf_8_test.h5 | 500 | 8  |
+| sf_9_test.h5 | 500 | 9  |
+
+
 ## Quick Start
 
 ### 1. Requirements
@@ -36,6 +56,14 @@ Please downlaod the dataset and put it in the project folder. The download link 
 
 This project is built entirely on the Windows operating system. There may be unexpected issues on other operating systems.
 
+
+### 2. Train a Model
+
+The function 'train()' can train a length-versatile neural network, i.e., LSTM, GRU, Transformer or 'Flatten-free CNN'. Please change the variable 'model_type' to specify the type of the trained neural network.
+
+### 3. Inference
+
+The function 'inference()' can evaluate the trained neural network. It returns the overall accuracy and a confusion matrix. Please change the variable 'snr_awgn' to specify the range of artificial noise added to the test data. 
 
 
 ## License

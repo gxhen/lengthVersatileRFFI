@@ -197,16 +197,16 @@ if __name__ == '__main__':
     run_for = 'inference'
 
     if run_for == 'train':
-        data_path = ['D:/asilomar_2021_project/dataset/h5py_file/Train/sf_7_train.h5',
-                     'D:/asilomar_2021_project/dataset/h5py_file/Train/sf_8_train.h5',
-                     'D:/asilomar_2021_project/dataset/h5py_file/Train/sf_9_train.h5']
+        data_path = ['./Train/sf_7_train.h5',
+                     './Train/sf_8_train.h5',
+                     './Train/sf_9_train.h5']
         tx_range = np.arange(30, 40, dtype=int)
         model_type = 'gru'  # 'lstm' or 'gru' or 'transformer' or 'fcn'
 
         train(data_path, tx_range, model_type)
 
     elif run_for == 'inference':
-        data_path = 'D:/asilomar_2021_project/dataset/h5py_file/Test/sf_7_test.h5'
+        data_path = './sf_7_test.h5'
         tx_range = np.arange(30, 40, dtype=int)
         model_path = './nn_models/fcn_online.h5'
         model_type = 'fcn'
